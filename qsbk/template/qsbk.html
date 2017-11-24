@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>糗事百科热门内容</title>
+    <style>
+        li{list-style:none;margin-top: 10px}
+    </style>
+
+</head>
+<body>
+    <h3>糗事百科热门内容</h3>
+    <form action="/index" method="post">
+        <label>您需要查看几条TOP热门内容：</label>
+        <input type="text" name="num" placeholder="请输入数值">
+        <input type="submit" value="提交">
+
+    </form>
+    <h3>内容展示</h3>
+    <ul>
+        {%for item in INP %}
+        <li>{{item}}</li>
+        {%end%}
+
+
+    </ul>
+
+</body>
+</html>
